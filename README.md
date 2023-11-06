@@ -27,8 +27,10 @@ Please use **Python3**, **FastAPI** + **SQLAlchemy** + **Pytest** to complete th
 3. Write Pytest test cases to test the correctness of each route and the associations in the data table.
 
 ## Instruction
-To start the code assessment, fork this repository and finish the code assessment in your own Github account.
-Create a PR that including all of your tasks and leeting `Nicky` `Terry` to review it. Also leave a comment to the PR including the infos below, so that we could better recognize you and your CV. Leave a comment like this:
+1. To start the code assessment, you need to **fork** this repository first.
+2. **Create a PR to your own repository(NOT TO US)** after you finished the tasks.
+3. Adding `Nicky(lele9112@163.com)` `Terry(wh9112@gmail.com)` as your repository colaborator, so we can review your code. 
+4. Leave a comment to the PR including the infos below, so that we could better recognize you and your CV.
 ```
 Name: 
 Email:
