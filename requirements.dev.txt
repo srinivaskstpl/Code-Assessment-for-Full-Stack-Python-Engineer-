@@ -1,0 +1,6 @@
+# Tool
+pre-commit
+
+# Test
+pytest
+pytest-cov
