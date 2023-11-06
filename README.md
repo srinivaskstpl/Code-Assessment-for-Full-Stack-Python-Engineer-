@@ -1,9 +1,9 @@
-# Code assessment for Full stack Python engineer
+# Code assessment for full-stack Python engineer
 
-## FastAPI Service Test
+## Tasks
 
-This is a written test question based on python3 **FastAPI** + **SQLAlchemy** + **Pytest**, please **Fork** this project to complete the question in your code repository and open the repository address to us.
-1. create a SQLite database named `reviews` with tables `reviews`,`tags`,`review_tags`,`review_review_tag`. Please define and implement the relevant functionality using SQLAlchemy ORM model. Please commit SQLite files to this repository.
+Please use **Python3**, **FastAPI** + **SQLAlchemy** + **Pytest** to complete the following tasks:
+1. Create a SQLite database named `reviews` with tables `reviews`,`tags`,`review_tags`,`review_review_tag`. Please define and implement the relevant functionality using SQLAlchemy ORM model. At the end, please remember to commit SQLite files to the repository.
    1. `reviews`:
       1. id: integer type, primary key, auto-growth
       2. text: character type, maximum length is 2048 characters
@@ -24,4 +24,16 @@ This is a written test question based on python3 **FastAPI** + **SQLAlchemy** + 
    2. `GET /reviews`: Returns a list of all reviews, requires paging support, and looks up the associated `Tag` information. This API can use multiple `Tag` table ids for conditional queries.
    3. `POST /tags`: Create a new `Tag`.
    4. `DELETE /tags/{tag_id}`: Delete the `Tag`, if deleted you need to delete the associated `review_tag`.
-3. Write Pytest test cases to test the correctness of each route and the associations in the data table.## Requirements
+3. Write Pytest test cases to test the correctness of each route and the associations in the data table.
+
+## Instruction
+To start the code assessment, fork this repository and finish the code assessment in your own Github account.
+Create a PR that including all of your tasks and leeting `Nicky` `Terry` to review it. Also leave a comment to the PR including the infos below, so that we could better recognize you and your CV. Leave a comment like this:
+```
+Name: 
+Email:
+Application channel: Linkedin/UpWork/Yodo1 official website
+Position:
+```
+
+Thanks for your time~
