@@ -1,41 +1,52 @@
-# Code assessment for full-stack Python engineer
+# Code Assessment for Full-Stack Python Engineer
 
-## Tasks
+## Overview
 
-Please use **Python3**, **FastAPI** + **SQLAlchemy** + **Pytest** to complete the following tasks:
-1. Create a SQLite database named `reviews` with tables `reviews`,`tags`,`review_tags`,`review_review_tag`. Please define and implement the relevant functionality using SQLAlchemy ORM model. At the end, please remember to commit SQLite files to the repository.
-   1. `reviews`:
-      1. id: integer type, primary key, auto-growth
-      2. text: character type, maximum length is 2048 characters
-      3. is_tagged: bool type
-   2. `tags`:
-      1. id: integer, primary key, auto-growing
-      2. name: character type, max length is 50 characters
-   3. `review_tag`:
-      1. id: integer, primary key, auto-growth
-      2. is_ai_tag: bool type, can't be null, default false
-      3. tag_id: integer type, foreign key constraint for `tags` table
-   4. `reveiw_review_tags`.
-      1. id: integer, primary key, auto-growth
-      2. review_id: integer, `review` table foreign key constraint
-      3. review_tag_id: integer, foreign key constraint on `review_tag` table
-2. Create a FastAPI application, compliant with the OpenAPI specification, with the following routes
-   1. `POST /reviews/{review_id}/tags`: adds a `Tag` to the specified review, can add multiple ones
-   2. `GET /reviews`: Returns a list of all reviews, requires paging support, and looks up the associated `Tag` information. This API can use multiple `Tag` table ids for conditional queries.
-   3. `POST /tags`: Create a new `Tag`.
-   4. `DELETE /tags/{tag_id}`: Delete the `Tag`, if deleted you need to delete the associated `review_tag`.
-3. Write Pytest test cases to test the correctness of each route and the associations in the data table.
+This repository contains the code assessment for a full-stack Python engineer. The tasks involve creating a FastAPI application with SQLAlchemy ORM model for a SQLite database. The application includes routes for managing reviews and tags, and Pytest test cases to ensure correctness.
 
-## Instruction
-1. To start the code assessment, you need to **fork** this repository first.
-2. **Create a PR to your own repository(NOT TO US)** after you finished the tasks.
-3. Adding `Nicky(lele9112@163.com)` `Terry(wh9112@gmail.com)` as your repository colaborator, so we can review your code. 
-4. Leave a comment to the PR including the infos below, so that we could better recognize you and your CV.
-```
-Name: 
-Email:
-Application channel: Linkedin/UpWork/Yodo1 official website
-Position:
-```
+## Task Completion
 
-Thanks for your time~
+### Database Setup
+
+1. SQLite database named `reviews` with tables:
+   - `reviews` with columns: `id`, `text`, `is_tagged`
+   - `tags` with columns: `id`, `name`
+   - `review_tag` with columns: `id`, `is_ai_tag`, `tag_id`
+   - `review_review_tags` with columns: `id`, `review_id`, `review_tag_id`
+
+### FastAPI Application
+
+2. Implemented FastAPI application with OpenAPI compliant routes:
+   - `POST /reviews/{review_id}/tags`: Adds a tag to the specified review.
+   - `GET /reviews`: Returns a paginated list of reviews with associated tag information.
+   - `POST /tags`: Creates a new tag.
+   - `DELETE /tags/{tag_id}`: Deletes a tag and associated `review_tag`.
+
+### Testing
+
+3. Pytest test cases for each route and data associations:
+   - Use the following commands to run tests and check coverage:
+     ```bash
+     virtualenv venv
+     source venv/bin/activate  # On Windows, use venv\Scripts\activate
+     uvicorn main:app --reload
+     coverage run -m pytest test/test_review_routes.py
+     coverage report -m
+     ```
+
+## Instructions
+
+1. To start the code assessment, fork this repository.
+2. Create a pull request to the repository (access share via email).
+command -git clone https://github.com/srinivaskstpl/Code-Assessment-for-Full-Stack-Python-Engineer.git
+
+3. Added `Nicky(lele9112@163.com)` and `Terry(wh9112@gmail.com)` as collaborators to repository for code review.
+4. Leave a comment on the pull request with the following information:
+   ```markdown
+   Name:
+   Email:
+   Application channel: Linkedin/UpWork/Yodo1 official website
+   Position:
+   ```
+
+Thanks for your time and effort! If you have any questions, feel free to reach out to the provided contacts.
