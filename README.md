@@ -38,7 +38,7 @@ This repository contains the code assessment for a full-stack Python engineer. T
 
 1. To start the code assessment, fork this repository.
 2. Create a pull request to the repository (access share via email).
-command -git clone https://github.com/srinivaskstpl/Code-Assessment-for-Full-Stack-Python-Engineer.git
+command -git clone https://github.com/srinivaskstpl/Code-Assessment-for-Full-Stack-Python-Engineer-.git
 
 3. Added `Nicky(lele9112@163.com)` and `Terry(wh9112@gmail.com)` as collaborators to repository for code review.
 4. Leave a comment on the pull request with the following information:
